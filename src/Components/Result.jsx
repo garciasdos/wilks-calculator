@@ -10,7 +10,7 @@ function calculateResult(squat, benchPress, deadLift, bodyWeight) {
 
     let wilks = wilksCalculator.calculateWilksScore('m', parseFloat(bodyWeight), liftedWeight);
 
-    return Math.round(wilks);
+    return Math.round(wilks * 100) / 100;
 }
 
 const Result = ({squat, benchPress, deadLift, bodyWeight}) => (
